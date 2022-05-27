@@ -3,6 +3,8 @@ package com.example.myfirstapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,6 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d("hello", "there")
+
+
+
+    }
+
+    fun onClick(view: View) {
+        val helloText  = findViewById<TextView>(R.id.helloText)
+        helloText.text = "Clicked"
     }
 
     override fun onStart() {
